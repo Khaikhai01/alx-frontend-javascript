@@ -5,11 +5,11 @@ export default function handleProfileSignup() {
   const data2 = createUser();
   return Promise.all([data1, data2])
     .then((results) => {
-      console.log(`${results[0].body} ${results[1].firstName} ${results[1].lastName}`);      
+      console.log(`${results[0].body} ${results[1].firstName} ${results[1].lastName}`);
     })
     .catch((err) => {
       if (err) {
         console.log('Signup system offline');
       }
-    })
+    });
 }
